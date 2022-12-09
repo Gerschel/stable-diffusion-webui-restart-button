@@ -23,5 +23,6 @@ class Script(scripts.Script):
 
 
         with gr.Blocks(analytics_enabled=False, variant="panel"):
-            restart_g = gr.Button(value="Restart", variant="primary")
-            restart_g.click(fn=local_request_restart, _js='restart_reload', inputs=[], outputs=[])
+            with gr.Row():
+                restart_g = gr.Button(value="Restart", variant="primary")
+                restart_g.click(fn=local_request_restart, _js='restart_reload', inputs=[], outputs=[])
